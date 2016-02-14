@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="SimpleEditText"><attr format="integer" name="prepend_icon"/><attr format="integer" name="append_icon"/></declare-styleable>
-    <string name="app_name">SimpleEditText</string>
-</resources>

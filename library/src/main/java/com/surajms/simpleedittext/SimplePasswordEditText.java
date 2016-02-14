@@ -1,6 +1,7 @@
 package com.surajms.simpleedittext;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
@@ -32,8 +33,10 @@ public class SimplePasswordEditText extends SimpleEditText{
     @Override
     protected void init(AttributeSet attrs, int defStyleAttr) {
         super.init(attrs, defStyleAttr);
-        visibleTextDrawable = ContextCompat.getDrawable(getContext(), R.drawable.ic_visibility_black_24dp);
-        protectedTextDrawable = ContextCompat.getDrawable(getContext(), R.drawable.ic_visibility_off_black_24dp);
+        TypedArray styledAttributes = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.SimplePasswordEditText, defStyleAttr, 0);
+
+        visibleTextDrawable = ContextCompat.getDrawable(getContext(), styledAttributes.getResourceId(R.styleable.SimplePasswordEditText_visible_icon,R.drawable.ic_visibility_black_24dp));
+        protectedTextDrawable = ContextCompat.getDrawable(getContext(), styledAttributes.getResourceId(R.styleable.SimplePasswordEditText_protected_icon, R.drawable.ic_visibility_off_black_24dp));
         appendDrawable = visibleTextDrawable;
         setDrawableVisibility(appendDrawable, false);
         addTextChangedListener(new TextWatcher() {

@@ -22,7 +22,8 @@ public class SimpleEmailEditText extends SimpleEditText{
     @Override
     protected void init(AttributeSet attrs, int defStyleAttr) {
         super.init(attrs, defStyleAttr);
-        setPrependDrawable(R.drawable.ic_local_post_office_black_24dp);
+        if(prependDrawable == null)
+            setPrependDrawable(R.drawable.ic_local_post_office_black_24dp);
         drawDrawables();
     }
 }

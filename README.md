@@ -43,3 +43,4 @@ simpleEditText.setPrependTouchListener(new SimpleEditText.TouchListener() {
   }
 });
 ```
+![Icons](assets/icons.png)

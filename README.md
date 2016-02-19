@@ -17,6 +17,7 @@ dependencies {
 ```
 
 ###Usage
+To add drawables to the begining or end of the edittext use the app namespace.
 ```xml
 <com.surajms.simpleedittext.SimpleEditText
         android:layout_width="match_parent"
@@ -44,3 +45,10 @@ simpleEditText.setPrependTouchListener(new SimpleEditText.TouchListener() {
 });
 ```
 ![Icons](assets/icons.png)
+####Password Field
+```xml
+ <com.surajms.simpleedittext.SimplePasswordEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+```
+![Password](assets/password.gif)
